@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-const Color kInvestorColor = Colors.redAccent;
-const Color kIndividualColor = Colors.teal;
-const Color kStartupColor = Colors.amber;
+const Color kInvestorColor = Color(0xFF74E779);
+const Color kPeopleColor = Color(0xFF5CDDEF);
+const Color kStartupColor = Color(0xFFFFBC6E);
 const TextStyle kPostTextStyle =
-    TextStyle(fontSize: 15, fontWeight: FontWeight.w300);
+    TextStyle(fontSize: 14, fontWeight: FontWeight.w300);
 const TextStyle kPostAccountTitleStyle =
-    TextStyle(fontSize: 17, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
 const TextStyle kPostAccountDescStyle =
     TextStyle(fontSize: 10, fontWeight: FontWeight.normal);
 const TextStyle kPostTimeStyle =
-    TextStyle(fontSize: 13, fontWeight: FontWeight.w300, color: Colors.grey);
+    TextStyle(fontSize: 12, fontWeight: FontWeight.w300, color: Colors.grey);
+const TextStyle kLogoStyle =
+    TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black);

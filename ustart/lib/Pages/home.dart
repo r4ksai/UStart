@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ustart/Widgets/bottom_navigator.dart';
 import 'package:ustart/Widgets/post.dart';
+import 'package:ustart/Widgets/story_bar.dart';
+import 'package:ustart/constants.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -12,26 +13,20 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Ustart'),
-        ),
-        body: Post(
-          content: 'Something Random',
-          image: Image.network(
-            'https://lh5.googleusercontent.com/iwQjX5DHDoV0xazg1RTbgk4MEpw6HPlySeUeyBrCMsmU2jwgruhn6FM9MxlQa7hrTLlsnMZ3xhxrsmSxoOxmrTwZoQKC3NqozzWn2MjUgUFw-8UsUPpcExmDNvfPphfKpmxTyhXk',
-            fit: BoxFit.fitWidth,
+    return Container(
+      color: Colors.grey.shade200,
+      child: ListView(
+        children: [
+          StoryBar(),
+          Post(
+            content:
+                'My last day for this year holiday! So excited to share my memories with you guys! 😁😍',
+            image: Image.network(
+              'https://lh5.googleusercontent.com/iwQjX5DHDoV0xazg1RTbgk4MEpw6HPlySeUeyBrCMsmU2jwgruhn6FM9MxlQa7hrTLlsnMZ3xhxrsmSxoOxmrTwZoQKC3NqozzWn2MjUgUFw-8UsUPpcExmDNvfPphfKpmxTyhXk',
+              fit: BoxFit.fitWidth,
+            ),
           ),
-        ),
-        bottomNavigationBar: BottomNavigator(
-          onPress: (index) {
-            setState(() {
-              selectedBottomButton = index;
-            });
-          },
-          activeButton: selectedBottomButton,
-        ),
+        ],
       ),
     );
   }

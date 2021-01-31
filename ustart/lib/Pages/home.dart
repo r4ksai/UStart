@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ustart/Widgets/post.dart';
+import 'package:ustart/Widgets/idea_post.dart';
+import 'package:ustart/Widgets/image_post.dart';
+import 'package:ustart/Widgets/resource_post.dart';
 import 'package:ustart/Widgets/story_bar.dart';
 import 'package:ustart/constants.dart';
 
@@ -18,7 +20,7 @@ class _HomeState extends State<Home> {
       child: ListView(
         children: [
           StoryBar(),
-          Post(
+          ImagePost(
             content:
                 'My last day for this year holiday! So excited to share my memories with you guys! 😁😍',
             image: Image.network(
@@ -26,6 +28,14 @@ class _HomeState extends State<Home> {
               fit: BoxFit.fitWidth,
             ),
           ),
+          SizedBox(height: 10),
+          ResourcePost(
+              content:
+                  'Hello Connections, does someone know any label manufacturer that could our startup . we have to make labels for our rental scooters. We are located in Greater Noida. thanks'),
+          SizedBox(height: 10),
+          IdeaPost(
+              content:
+                  'Idea 21: What If there’s a platform for startups to seek and contribute resources to similar niche business.')
         ],
       ),
     );

@@ -13,3 +13,5 @@ const TextStyle kPostTimeStyle =
     TextStyle(fontSize: 12, fontWeight: FontWeight.w300, color: Colors.grey);
 const TextStyle kLogoStyle =
     TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black);
+const TextStyle kPostQuestionTextStyle =
+    TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey);

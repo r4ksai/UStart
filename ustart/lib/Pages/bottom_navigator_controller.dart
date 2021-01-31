@@ -12,6 +12,21 @@ class TabbedNavigationController extends StatefulWidget {
 class _TabbedNavigationControllerState
     extends State<TabbedNavigationController> {
   int selectedBottomButton = 0;
+  List<Widget> tabs = [
+    Home(),
+    Container(
+      color: Colors.teal,
+    ),
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.cyan,
+    ),
+    Container(
+      color: Colors.purple,
+    )
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +46,7 @@ class _TabbedNavigationControllerState
                 ],
               )
             : null,
-        body: selectedBottomButton == 0
-            ? Home()
-            : Container(
-                color: Colors.teal,
-              ),
+        body: tabs[selectedBottomButton],
         bottomNavigationBar: BottomNavigator(
           onPress: (index) {
             setState(() {
